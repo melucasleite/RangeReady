@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  db:
+    image: postgres:13
+    environment:
+      POSTGRES_USER: rangeready
+      POSTGRES_PASSWORD: rangeready
+      POSTGRES_DB: rangeready
+    volumes:
+      - ./data:/var/lib/postgresql/data
+    ports:
+      - 5432:5432
